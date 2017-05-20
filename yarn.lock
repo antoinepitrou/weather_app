@@ -4513,6 +4513,10 @@ sane@~1.4.1:
     walker "~1.0.5"
     watch "~0.10.0"
 
+sass@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-0.5.0.tgz#9dee1183a0f400361f2c5d3453bf2e54705e03f9"
+
 sax@^1.2.1, sax@~1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"

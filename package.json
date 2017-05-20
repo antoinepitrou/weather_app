@@ -5,12 +5,15 @@
   "dependencies": {
     "axios": "^0.16.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "sass": "^0.5.0"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
   },
   "scripts": {
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
