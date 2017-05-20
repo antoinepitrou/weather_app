@@ -22,3 +22,32 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#root {
+
+  font-family: 'Avenir', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height:100vh;
+  text-align: center;
+  flex-flow : row nowrap;
+  background-image: url('./assets/weather_background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.day {
+  font-size: 30px;
+}
+
+.temperature {
+  font-size: 30px;
+}
+
+.forecast {
+  margin:30px;
+  width:350px;
+}
