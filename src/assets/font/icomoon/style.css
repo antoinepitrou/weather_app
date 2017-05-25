@@ -1,0 +1,101 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ov7jn1');
+  src:  url('fonts/icomoon.eot?ov7jn1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ov7jn1') format('truetype'),
+    url('fonts/icomoon.woff?ov7jn1') format('woff'),
+    url('fonts/icomoon.svg?ov7jn1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sun:before {
+  content: "\e900";
+}
+.icon-cloud-moon-fog2:before {
+  content: "\e901";
+}
+.icon--cloud-sun-fog2:before {
+  content: "\e903";
+}
+.icon-clouds2:before {
+  content: "\e909";
+}
+.icon-clouds4:before {
+  content: "\e90b";
+}
+.icon-cloud-moon-snowflakes2:before {
+  content: "\e90d";
+}
+.icon-cloud-sun-snowflakes2:before {
+  content: "\e90f";
+}
+.icon-cloud-snowflakes2:before {
+  content: "\e911";
+}
+.icon-cloud-moon-raindrops2:before {
+  content: "\e913";
+}
+.icon-cloud-sun-raindrops2:before {
+  content: "\e915";
+}
+.icon-cloud-raindrops2:before {
+  content: "\e917";
+}
+.icon-cloud-moon-lightning2:before {
+  content: "\e919";
+}
+.icon-cloud-sun-lightning2:before {
+  content: "\e91b";
+}
+.icon-cloud-moon-snow2:before {
+  content: "\e91d";
+}
+.icon-cloud-sun-snow2:before {
+  content: "\e91f";
+}
+.icon-cloud-moon-rain2:before {
+  content: "\e921";
+}
+.icon-cloud-sun-rain2:before {
+  content: "\e923";
+}
+.icon-cloud-moon2:before {
+  content: "\e925";
+}
+.icon-cloud-wind2:before {
+  content: "\e92d";
+}
+.icon-cloud-lightning2:before {
+  content: "\e92f";
+}
+.icon-cloud-sun2:before {
+  content: "\e931";
+}
+.icon-cloud-fog2:before {
+  content: "\e933";
+}
+.icon-cloud-snow2:before {
+  content: "\e935";
+}
+.icon-cloud-rain2:before {
+  content: "\e937";
+}
+.icon-cloud2:before {
+  content: "\e93d";
+}

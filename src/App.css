@@ -26,13 +26,7 @@
 #root {
 
   font-family: 'Avenir', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   height:100vh;
-  text-align: center;
-  flex-flow : row nowrap;
   background-image: url('./assets/weather_background.svg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,14 +34,28 @@
 }
 
 .day {
-  font-size: 30px;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color:#d2d2d2;
 }
 
 .temperature {
-  font-size: 30px;
+  font-size: 100px;
 }
 
-.forecast {
-  margin:30px;
-  width:350px;
+.forecast-app {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+}
+
+.icomoon {
+  font-size:75px;
+  margin-right: 10px;
+  margin-bottom: -10px;
+}
+
+.button-previous {
+  margin-right:30px;
 }

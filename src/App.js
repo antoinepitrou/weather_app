@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './stylesheets/simple-grid.css';
 import ForecastApp from './components/ForecastApp';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 

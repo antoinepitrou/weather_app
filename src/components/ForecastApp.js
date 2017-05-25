@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Forecast from './Forecast';
-import ButtonStepMinus from './ButtonStepMinus';
-import ButtonStepPlus from './ButtonStepPlus';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class ForecastApp extends Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class ForecastApp extends Component {
       .then(function(response){
         var forecastResponse = response.data.forecast.simpleforecast.forecastday;
         this.setState({forecastData:forecastResponse});
-        console.log(forecastResponse)
+        console.log(forecastResponse);
       }.bind(this));
   }
   increaseStep(){
@@ -39,9 +38,15 @@ class ForecastApp extends Component {
   render(){
     return (
       <div>
-        <ButtonStepMinus decreaseStep={this.decreaseStep.bind(this)} />
-        <Forecast forecastData={this.state.forecastData} step={this.state.step} />
-        <ButtonStepPlus increaseStep={this.increaseStep.bind(this)} />
+        <div className="container forecast-app">
+          <div className="row">
+            <div className="col-8">
+              <Forecast forecastData={this.state.forecastData} step={this.state.step} />
+              <RaisedButton className="button-previous" onClick={this.decreaseStep.bind(this)} label="Previous" />
+              <RaisedButton onClick={this.increaseStep.bind(this)} label="Next" />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -1,21 +1,44 @@
 import React, { Component } from 'react';
+import '../assets/font/icomoon/style.css';
+
+class IconSwitcher extends Component {
+  render() {
+    var icon = this.props.forecastData.map(function(value){
+      return value.icon
+    });
+    var weatherIcon = {
+      fog: 'icon-cloud-fog2',
+      partlycloudy: 'icon-cloud-sun2',
+      clear:'icon-sun'
+    }
+    for (var i in weatherIcon) {
+      if (icon[this.props.step] === i) {
+        icon = weatherIcon[i]
+      }
+    }
+    return (
+      <span className='icomoon'>
+        <span className={icon}></span>
+      </span>
+    );
+  }
+}
+
+
 
 class Forecast extends Component {
   render(){
     var day = this.props.forecastData.map(function(value){
-      return value.date.weekday + " " + value.date.monthname+ " " + value.date.day + " " + value.date.year
+      return value.date.weekday + " " + value.date.monthname+ " " + value.date.day 
     })
     var temperature = this.props.forecastData.map(function(value){
       return value.high.celsius
     })
-    var icon = this.props.forecastData.map(function(value){
-      return value.icon_url
-    })
     return (
       <div className="forecast">
+        <IconSwitcher forecastData={this.props.forecastData} step={this.props.step} />
+        <span className="temperature" >{temperature[this.props.step]}˚C</span>
         <div className="day">{day[this.props.step]}</div>
-        <img className="icon_url" src={icon[this.props.step]} />
-        <div className="temperature" >{temperature[this.props.step]}˚C</div>
       </div>
     );
   }
