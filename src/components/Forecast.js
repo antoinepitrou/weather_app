@@ -9,7 +9,8 @@ class IconSwitcher extends Component {
     var weatherIcon = {
       fog: 'icon-cloud-fog2',
       partlycloudy: 'icon-cloud-sun2',
-      clear:'icon-sun'
+      clear:'icon-sun',
+      mostlycloudy:'icon-clouds2'
     }
     for (var i in weatherIcon) {
       if (icon[this.props.step] === i) {
@@ -29,15 +30,15 @@ class IconSwitcher extends Component {
 class Forecast extends Component {
   render(){
     var day = this.props.forecastData.map(function(value){
-      return value.date.weekday + " " + value.date.monthname+ " " + value.date.day 
+      return value.date.weekday + " " + value.date.monthname+ " " + value.date.day
     })
     var temperature = this.props.forecastData.map(function(value){
-      return value.high.celsius
+      return value.high.fahrenheit
     })
     return (
       <div className="forecast">
         <IconSwitcher forecastData={this.props.forecastData} step={this.props.step} />
-        <span className="temperature" >{temperature[this.props.step]}˚C</span>
+        <span className="temperature" >{temperature[this.props.step]}˚F</span>
         <div className="day">{day[this.props.step]}</div>
       </div>
     );

@@ -36,14 +36,17 @@ class ForecastApp extends Component {
     this.setState({step:stepMinus});
   }
   render(){
+    var weekday = this.state.forecastData.map(function(value){
+      return value.date.weekday
+    })
     return (
       <div>
         <div className="container forecast-app">
           <div className="row">
             <div className="col-8">
               <Forecast forecastData={this.state.forecastData} step={this.state.step} />
-              <RaisedButton className="button-previous" onClick={this.decreaseStep.bind(this)} label="Previous" />
-              <RaisedButton onClick={this.increaseStep.bind(this)} label="Next" />
+              <RaisedButton className="button-previous" onClick={this.decreaseStep.bind(this)} disabled={this.state.step === 0} label="Previous" />
+              <RaisedButton onClick={this.increaseStep.bind(this)} disabled={this.state.step  >= this.state.forecastData.length - 1} label="Next" />
             </div>
           </div>
         </div>

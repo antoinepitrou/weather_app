@@ -59,3 +59,10 @@
 .button-previous {
   margin-right:30px;
 }
+
+.fade {
+  opacity: 1;
+  transition : opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
