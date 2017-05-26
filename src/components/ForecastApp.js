@@ -12,7 +12,7 @@ class ForecastApp extends Component {
     }
   }
   componentWillMount(){
-    axios.get('http://api.wunderground.com/api/44539645ac11cd74/forecast10day/q/CA/San_Francisco.json')
+    axios.get('https://api.wunderground.com/api/44539645ac11cd74/forecast10day/q/CA/San_Francisco.json')
       .then(function(response){
         var forecastResponse = response.data.forecast.simpleforecast.forecastday;
         this.setState({forecastData:forecastResponse});
